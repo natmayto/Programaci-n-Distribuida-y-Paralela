@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<?xml-stylesheet type="text/xsl" href="XML.xsl" ?>
+
+<presupuesto>
+    <ingresos>
+        <concepto>1.1 Matriculas</concepto>
+        <anio>2019</anio>
+        <peso>900</peso>
+    </ingresos>
+    <ingresos>
+        <concepto>1.2 Matriculas</concepto>
+        <anio>2020</anio>
+        <peso>300</peso>
+    </ingresos>
+    <ingresos>
+        <concepto>1.3 Matriculas</concepto>
+        <anio>2021</anio>
+        <peso>110</peso>
+    </ingresos>
+    <ingresos>
+        <concepto>1.4 Matriculas</concepto>
+        <anio>2022</anio>
+        <peso>120</peso>
+    </ingresos>
+    <ingresos>
+        <concepto>1.5 Matriculas</concepto>
+        <anio>2023</anio>
+        <peso>180</peso>
+    </ingresos>
+
+    <ingresostotal>
+        <concepto>1 Matriculas</concepto>
+        <total>1610</total>
+    </ingresostotal>
+
+    <ingresos>
+        <concepto>2.1 Derechos Pecuniarios</concepto>
+        <anio>2019</anio>
+        <peso>890</peso>
+    </ingresos>
+    <ingresos>
+        <concepto>2.2 Derechos Pecuniarios</concepto>
+        <anio>2020</anio>
+        <peso>130</peso>
+    </ingresos>
+    <ingresos>
+        <concepto>2.3 Derechos Pecuniarios</concepto>
+        <anio>2021</anio>
+        <peso>200</peso>
+    </ingresos>
+    <ingresos>
+        <concepto>2.4 Derechos Pecuniarios</concepto>
+        <anio>2022</anio>
+        <peso>380</peso>
+    </ingresos>
+    <ingresos>
+        <concepto>2.5 Derechos Pecuniarios</concepto>
+        <anio>2023</anio>
+        <peso>130</peso>
+    </ingresos>
+
+    <ingresostotal>
+        <concepto>2. Derechos Pecuniarios</concepto>
+        <total>1730</total>
+    </ingresostotal>
+
+    <ingresostotal>
+    <totali>2485</totali>
+    </ingresostotal>
+
+    <egresos>
+        <concepto>1.1 Servicios</concepto>
+        <anio>2019</anio>
+        <peso>690</peso>
+    </egresos>
+    <egresos>
+        <concepto>1.2 Servicios</concepto>
+        <anio>2020</anio>
+        <peso>140</peso>
+    </egresos>
+    <egresos>
+        <concepto>1.3 Servicios</concepto>
+        <anio>2021</anio>
+        <peso>108</peso>
+    </egresos>
+    <egresos>
+        <concepto>1.4 Servicios</concepto>
+        <anio>2022</anio>
+        <peso>130</peso>
+    </egresos>
+    <egresos>
+        <concepto>1.5 Servicios</concepto>
+        <anio>2023</anio>
+        <peso>120</peso>
+    </egresos>
+
+    <egresostotal>
+        <concepto>1. Servicios</concepto>
+        <total>1188</total>
+        <letra>9</letra>
+    </egresostotal>
+
+    <egresos>
+        <concepto>2.1 Gastos</concepto>
+        <anio>2019</anio>
+        <peso>790</peso>
+    </egresos>
+    <egresos>
+        <concepto>2.2 Gastos</concepto>
+        <anio>2020</anio>
+        <peso>110</peso>
+    </egresos>
+    <egresos>
+        <concepto>2.3 Gastos</concepto>
+        <anio>2021</anio>
+        <peso>112</peso>
+    </egresos>
+    <egresos>
+        <concepto>2.4 Gastos</concepto>
+        <anio>2022</anio>
+        <peso>180</peso>
+    </egresos>
+    <egresos>
+        <concepto>2.5 Gastos</concepto>
+        <anio>2023</anio>
+        <peso>105</peso>
+    </egresos>
+
+    <egresostotal>
+        <concepto>2. Gastos</concepto>
+        <total>1297</total>
+        <letra>6</letra>
+    </egresostotal>
+
+    <egresostotal>
+    <totale>3340</totale>
+    </egresostotal>
+</presupuesto>
