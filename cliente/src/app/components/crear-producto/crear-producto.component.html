@@ -1,0 +1,89 @@
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-lg-10 offset-lg-1">
+            <div class="card">
+            <div class="card-body text-center">
+                <span class="titulo">{{ titulo | uppercase }}</span>
+                <form class="mt-3" [formGroup]="productoForm" (ngSubmit)="agregarproducto()">
+                    <div class="mb-3">
+                        <input type="text" formControlName="nombre_animal" class="form-control form-control-lg" placeholder="Nombre de la Mascota">
+                        <div class="text-danger" *ngIf="productoForm.get('nombre_animal')?.hasError('required') && productoForm.get('nombre_animal')?.touched">
+                            <span>El nombre de la mascota <strong>es obligatorio</strong></span>
+                        </div>
+                      </div>
+                      <div class="mb-3">
+                        <input type="text" formControlName="raza_animal" class="form-control form-control-lg" placeholder="Raza">
+                        <div class="text-danger" *ngIf="productoForm.get(' raza_animal')?.hasError('required') && productoForm.get(' raza_animal')?.touched">
+                            <span>La raza de la mascota <strong>es obligatoria</strong></span>
+                        </div>
+                      </div>
+                      <div class="mb-3">
+                        <input type="number" formControlName="edad_animal" class="form-control form-control-lg" placeholder="Edad de la Mascota">
+                        <div class="text-danger" *ngIf="productoForm.get('edad_animal')?.hasError('required') && productoForm.get('edad_animal')?.touched">
+                            <span>La edad de la mascota <strong>es obligatoria</strong></span>
+                        </div>
+                      </div>
+                      <div class="mb-3">
+                        <input type="number" formControlName="peso_animal" class="form-control form-control-lg" placeholder="Peso de la Mascota">
+                        <div class="text-danger" *ngIf="productoForm.get('peso_animal')?.hasError('required') && productoForm.get('peso_animal')?.touched">
+                            <span>El peso de la mascota <strong>es obligatorio</strong></span>
+                        </div>
+                      </div>
+                      <div class="mb-3">
+                        <input type="number" formControlName="cedula_cliente" class="form-control form-control-lg" placeholder="Cédula del Cliente">
+                        <div class="text-danger" *ngIf="productoForm.get('cedula_cliente')?.hasError('required') && productoForm.get('cedula_cliente')?.touched">
+                            <span>La cédula del cliente <strong>es obligatoria</strong></span>
+                        </div>
+                      </div>
+                      <div class="mb-3">
+                        <input type="text" formControlName="nombre_cliente" class="form-control form-control-lg" placeholder="Nombre del Cliente">
+                        <div class="text-danger" *ngIf="productoForm.get('nombre_cliente')?.hasError('required') && productoForm.get('nombre_cliente')?.touched">
+                            <span>El nombre del cliente <strong>es obligatorio</strong></span>
+                        </div>
+                      </div>
+                      <div class="mb-3">
+                        <input type="text" formControlName="apellidos_cliente" class="form-control form-control-lg" placeholder="Apellidos del Cliente">
+                        <div class="text-danger" *ngIf="productoForm.get('apellidos_cliente')?.hasError('required') && productoForm.get('apellidos_cliente')?.touched">
+                            <span>Los apellidos del cliente <strong>son obligatorios</strong></span>
+                        </div>
+                      </div>
+                      <div class="mb-3">
+                        <input type="text" formControlName="direccion_cliente" class="form-control form-control-lg" placeholder="Dirección del Cliente">
+                        <div class="text-danger" *ngIf="productoForm.get('direccion_cliente')?.hasError('required') && productoForm.get('direccion_cliente')?.touched">
+                            <span>La dirección del cliente <strong>es obligatoria</strong></span>
+                        </div>
+                      </div>
+                      <div class="mb-3">
+                        <input type="number" formControlName="telefono_cliente" class="form-control form-control-lg" placeholder="Teléfono del Cliente">
+                        <div class="text-danger" *ngIf="productoForm.get('telefono_cliente')?.hasError('required') && productoForm.get('telefono_cliente')?.touched">
+                            <span>El teléfono del cliente <strong>es obligatorio</strong></span>
+                        </div>
+                      </div>
+                      <div class="mb-3">
+                        <input type="text" formControlName="nombre_medicamento" class="form-control form-control-lg" placeholder="Nombre del Medicamento">
+                        <div class="text-danger" *ngIf="productoForm.get('nombre_medicamento')?.hasError('required') && productoForm.get('nombre_medicamento')?.touched">
+                            <span>El nombre del medicamento <strong>es obligatorio</strong></span>
+                        </div>
+                      </div>
+                      <div class="mb-3">
+                        <input type="text" formControlName="descripcion_medicamento" class="form-control form-control-lg" placeholder="Descripción del Medicamento">
+                        <div class="text-danger" *ngIf="productoForm.get('descripcion_medicamento')?.hasError('required') && productoForm.get('descripcion_medicamento')?.touched">
+                            <span>La descripción del medicamento <strong>es obligatoria</strong></span>
+                        </div>
+                      </div>
+                      <div class="mb-3">
+                        <input type="number" formControlName="dosis_medicamento" class="form-control form-control-lg" placeholder="Cantidad de Dosis del Medicamento">
+                        <div class="text-danger" *ngIf="productoForm.get('dosis_medicamento')?.hasError('required') && productoForm.get('dosis_medicamento')?.touched">
+                            <span>La dosis del medicamento <strong>es obligatoria</strong></span>
+                        </div>
+                      </div>
+                      <div class="mb-3">
+                        <button routerLink="/" class="btn btn-secondary btn-lg float-start">VOLVER</button>
+                        <button type="submit" [disabled]="productoForm.invalid" class="btn btn-success btn-lg float-end">ACEPTAR</button>
+                      </div>
+                </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

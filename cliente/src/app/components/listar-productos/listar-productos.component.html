@@ -1,0 +1,52 @@
+<div class="container mt-5">
+   <div class="row">
+    <div class="col-lg-10 offset-lg-1">
+        <div class="card">
+            <div class="card-body text-center">
+                <span class="titulo">Listado - Información de la Veterinaria PETS S.A.</span>
+                <button class="btn btn-success float-end" routerLink="/crear-producto">NUEVO</button>
+                <table *ngIf="listProductos.length > 0" class="table table-striped mt-3">
+                    <thead>
+                      <tr>
+                        <th scope="col">Nombre Mascota</th>
+                        <th scope="col">Raza</th>
+                        <th scope="col">Edad</th>
+                        <th scope="col">Peso en Kg</th>
+                        <th scope="col">Cédula Cliente</th>
+                        <th scope="col">Nombre Cliente</th>
+                        <th scope="col">Apellidos Cliente</th>
+                        <th scope="col">Dirección</th>
+                        <th scope="col">Teléfono</th>
+                        <th scope="col">Medicamento</th>
+                        <th scope="col">Descripción</th>
+                        <th scope="col">Dosis</th>
+                        <th scope="col"></th>
+                
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr *ngFor="let producto of listProductos">
+                        <th>{{producto.nombre_animal}}</th>
+                        <td>{{producto.raza_animal}}</td>
+                        <td>{{producto.edad_animal}}</td>
+                        <td>{{producto.peso_animal}}</td>
+                        <td>{{producto.cedula_cliente}}</td>
+                        <td>{{producto.nombre_cliente}}</td>
+                        <td>{{producto.apellidos_cliente}}</td>
+                        <td>{{producto.direccion_cliente}}</td>
+                        <td>{{producto.telefono_cliente}}</td>
+                        <td>{{producto.nombre_medicamento}}</td>
+                        <td>{{producto.descripcion_medicamento}}</td>
+                        <td>{{producto.dosis_medicamento}}</td>
+                        <td><i (click)="eliminarProducto(producto._id)" class="fas fa-solid fa-trash text-danger"></i>
+                            <i [routerLink]="['/editar-producto', producto._id]" class="fas fa-solid fa-pen-to-square text-primary"></i>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <h5 style="text-align: start; margin-top: 10px;" *ngIf="listProductos.length == 0">No hay productos para mostrar</h5>
+            </div>
+        </div>
+    </div>
+   </div> 
+</div>
