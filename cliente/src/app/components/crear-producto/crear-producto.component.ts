@@ -16,20 +16,11 @@ export class CrearProductoComponent implements OnInit {
   titulo = 'Crear Listado';
   id: string | null;
 
-  constructor(private fb: FormBuilder, private router: Router, private toastr: ToastrService, private _productoService: ProductoService, private aRouter: ActivatedRoute) { 
+  constructor(private fb: FormBuilder, private router: Router, private toastr: ToastrService, private _productoService: ProductoService, private aRouter: ActivatedRoute) {
     this.productoForm = this.fb.group({
-      nombre_animal: ['', Validators.required],
-      raza_animal: ['', Validators.required],
-      edad_animal: ['', Validators.required],
-      peso_animal: ['', Validators.required],
-      cedula_cliente: ['', Validators.required],
-      nombre_cliente: ['', Validators.required],
-      apellidos_cliente: ['', Validators.required],
-      direccion_cliente: ['', Validators.required],
-      telefono_cliente: ['', Validators.required],
-      nombre_medicamento: ['', Validators.required],
-      descripcion_medicamento: ['', Validators.required],
-      dosis_medicamento: ['', Validators.required],
+      producto: ['', Validators.required],
+      categoria: ['', Validators.required],
+      precio: ['', Validators.required],
     })
     this.id = this.aRouter.snapshot.paramMap.get('id');
   }
@@ -41,18 +32,10 @@ export class CrearProductoComponent implements OnInit {
   agregarproducto(){
 
     const PRODUCTO: Producto = {
-      nombre_animal: this.productoForm.get('nombre_animal')?.value,
-      raza_animal: this.productoForm.get('raza_animal')?.value,
-      edad_animal: this.productoForm.get('edad_animal')?.value,
-      peso_animal: this.productoForm.get('peso_animal')?.value,
-      cedula_cliente: this.productoForm.get('cedula_cliente')?.value,
-      nombre_cliente: this.productoForm.get('nombre_cliente')?.value,
-      apellidos_cliente: this.productoForm.get('apellidos_cliente')?.value,
-      direccion_cliente:this.productoForm.get('direccion_cliente')?.value,
-      telefono_cliente: this.productoForm.get('telefono_cliente')?.value,
-      nombre_medicamento: this.productoForm.get('nombre_medicamento')?.value,
-      descripcion_medicamento: this.productoForm.get('descripcion_medicamento')?.value,
-      dosis_medicamento: this.productoForm.get('dosis_medicamento')?.value,
+      producto: this.productoForm.get('producto')?.value,
+      categoria: this.productoForm.get('categoria')?.value,
+      precio: this.productoForm.get('precio')?.value,
+
     }
 
     if (this.id !== null){
@@ -87,18 +70,9 @@ esEditar() {
       this._productoService.obtenerProducto(this.id).subscribe(data =>{
         this.productoForm.setValue({
 
-      nombre_animal: data.nombre_animal,
-      raza_animal: data.raza_animal,
-      edad_animal: data.edad_animal,
-      peso_animal: data.peso_animal,
-      cedula_cliente: data.cedula_cliente,
-      nombre_cliente: data.nombre_cliente,
-      apellidos_cliente: data.apellidos_cliente,
-      direccion_cliente: data.direccion_cliente,
-      telefono_cliente: data.telefono_cliente,
-      nombre_medicamento: data.nombre_medicamento,
-      descripcion_medicamento: data.descripcion_medicamento,
-      dosis_medicamento: data.dosis_medicamento,
+      producto: data.producto,
+      categoria: data.categoria,
+      precio: data.precio,
 
         })
 

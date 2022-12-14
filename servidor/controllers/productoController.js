@@ -36,25 +36,16 @@ exports.actualizarProducto = async (req, res) => {
 
     try{
 
-        const { nombre_animal, raza_animal, edad_animal, peso_animal, cedula_cliente, nombre_cliente, apellidos_cliente, direccion_cliente, telefono_cliente, nombre_medicamento, descripcion_medicamento, dosis_medicamento } = req.body;
+        const { product, categoria, precio } = req.body;
         let producto = await Producto.findById(req.params.id);
 
         if(!producto){
             res.status(404).json({ msg: 'No existe el producto' })
         }
 
-        producto.nombre_animal = nombre_animal;
-        producto.raza_animal = raza_animal;
-        producto.edad_animal = edad_animal;
-        producto.peso_animal = peso_animal;
-        producto.cedula_cliente = cedula_cliente;
-        producto.nombre_cliente = nombre_cliente;
-        producto.apellidos_cliente = apellidos_cliente;
-        producto.direccion_cliente = direccion_cliente;
-        producto.telefono_cliente = telefono_cliente;
-        producto.nombre_medicamento = nombre_medicamento;
-        producto.descripcion_medicamento = descripcion_medicamento;
-        producto.dosis_medicamento = dosis_medicamento;
+        producto.product = producto;
+        producto.categoria = categoria;
+        producto.precio = precio;
 
         producto = await Producto.findByIdAndUpdate({ _id: req.params.id },producto, { new: true })
         res.json(producto);
